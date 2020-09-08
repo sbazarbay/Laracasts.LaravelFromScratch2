@@ -21,4 +21,9 @@ class ConversationPolicy
     {
         return $conversation->user->is($user);
     }
+
+    public function view(User $user, Conversation $conversation)
+    {
+        return $conversation->user->is($user);
+    }
 }
