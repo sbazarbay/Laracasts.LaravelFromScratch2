@@ -27,4 +27,8 @@ Route::get('conversations', 'ConversationsController@index');
 Route::get('conversations/{conversation}', 'ConversationsController@show')->middleware('can:view,conversation');
 Route::post('best-replies/{reply}', 'ConversationBestReplyController@store');
 
+Route::get('/reports', function () {
+	return 'The Secret Reports';
+})->middleware('can:view_reports');
+
 Auth::routes();
